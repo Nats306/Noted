@@ -53,7 +53,7 @@ module.exports = (sequelize) => {
         },
     }, {
         sequelize,
-        modelName: 'sleep',
+        modelName: 'Sleep',
         tableName: 'sleeps',
         timestamps: false
     });

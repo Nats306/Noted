@@ -33,7 +33,7 @@ module.exports = (sequelize) => {
         }
     },{
         sequelize,
-        modelName: 'water',
+        modelName: 'Water',
         tableName: 'waters',
         timestamps: false
     })

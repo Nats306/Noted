@@ -33,7 +33,7 @@ module.exports = (sequelize) => {
         }
     }, {
         sequelize,
-        modelName: 'moodMonthly',
+        modelName: 'MoodMonthly',
         tableName: 'moodsMonthly',
         timestamps: false
     });

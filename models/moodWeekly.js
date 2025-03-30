@@ -61,7 +61,7 @@ module.exports = (sequelize) => {
         }
     }, {
         sequelize,
-        modelName: 'moodWeekly',
+        modelName: 'MoodWeekly',
         tableName: 'moodsWeekly',
         timestamps: false
     });

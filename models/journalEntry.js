@@ -46,11 +46,11 @@ module.exports = (sequelize) => {
               model: "usuarios",
               key: "id",
             },
-            onDelete: "CASCADE",
+            onDelete: "RESTRICTED",
         },
     }, {
         sequelize,
-        modelName: 'journalEntry',
+        modelName: 'JournalEntry',
         tableName: 'journalEntries',
         timestamps: false
     });

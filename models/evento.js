@@ -24,7 +24,7 @@ module.exports = (sequelize) => {
         },
         hora:{
             type: DataTypes.TIME,
-            allowNull: false
+            allowNull: true
         },
         descripcion: {
             type: DataTypes.TEXT,
@@ -37,11 +37,11 @@ module.exports = (sequelize) => {
               model: "usuarios",
               key: "id",
             },
-            onDelete: "CASCADE",
+            onDelete: "RESTRICTED",
         },
     }, {
         sequelize,
-        modelName: 'evento',
+        modelName: 'Evento',
         tableName: 'eventos',
         timestamps: false
     });

@@ -4,6 +4,15 @@ const bcrypt = require('bcryptjs');
 
 module.exports = (sequelize) => {
     class Usuario extends Model{
+        static associate(models){
+            Usuario.hasMany(models.Evento, { foreignKey: "usuarioFk", as: "Evento" })
+            Usuario.hasMany(models.JournalEntry, { foreignKey: "usuarioFk", as: "JournalEntry" })
+            Usuario.hasMany(models.MoodMonthly, { foreignKey: "usuarioFk", as: "MoodMonthly" })
+            Usuario.hasMany(models.MoodWeekly, { foreignKey: "usuarioFk", as: "MoodWeekly" })
+            Usuario.hasMany(models.Sleep, { foreignKey: "usuarioFk", as: "Sleep" })
+            Usuario.hasMany(models.Tarea, { foreignKey: "usuarioFk", as: "Tarea" })
+            Usuario.hasMany(models.Water, { foreignKey: "usuarioFk", as: "Water" })
+        }
         async validarPassword(password){
             return await bcrypt.compare(password, this.password);
         }
@@ -40,7 +49,7 @@ module.exports = (sequelize) => {
         }
     },{
         sequelize,
-        modelName: 'usuario',
+        modelName: 'Usuario',
         tableName: 'usuarios',
         timestamps: false,
 
