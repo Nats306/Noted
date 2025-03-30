@@ -15,7 +15,7 @@ module.exports = {
         allowNull: false
       },
       litrosTomadosDia: {
-        type: Sequelize.DECIMAL,
+        type: Sequelize.DECIMAL(2, 1),
         allowNull: false
       },
       usuarioFk: {
