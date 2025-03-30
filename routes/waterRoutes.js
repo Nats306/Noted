@@ -5,6 +5,6 @@ const authService =  require("../services/authService");
 
 router.get('/', authService, waterController.getWaters)
 router.post('/', authService, waterController.addWater)
-router.put('/', authService, waterController.updateWater)
+router.put('/:id', authService, waterController.updateWater)
 
 module.exports = router

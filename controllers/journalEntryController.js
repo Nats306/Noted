@@ -42,7 +42,7 @@ const updateJournalEntry = async (req, res) => {
             return res.status(404).json({message: "Entrada del diario no encontrada"});
         }
 
-        if(evento.usuarioFk !== usuarioFk){
+        if(journalEntry.usuarioFk !== usuarioFk){
             return res.status(403).json({message: "No tienes permiso para actualizar esta entrada del diario"})
         }
 

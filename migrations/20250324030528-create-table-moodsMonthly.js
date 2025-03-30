@@ -25,7 +25,7 @@ module.exports = {
           model: "usuarios",
           key: "id",
         },
-        onDelete: "CASCADE",
+        onDelete: "RESTRICTED",
       }
     })
   },

@@ -45,7 +45,7 @@ const updateWater = async (req, res) => {
         if(fecha) water.fecha = fecha;
         if(litrosTomadosDia) water.litrosTomadosDia = litrosTomadosDia
 
-        await evento.save();
+        await water.save();
         return res.status(200).json({message: "Registro de agua actualizado", water});
     } catch (error) {
         return res.status(500).json({error: error.message});

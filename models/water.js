@@ -19,7 +19,7 @@ module.exports = (sequelize) => {
             allowNull: false
         },
         litrosTomadosDia: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.DECIMAL(10,1),
             allowNull: false
         },
         usuarioFk: {
