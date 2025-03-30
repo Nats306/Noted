@@ -31,7 +31,7 @@ const getTareas = async (req, res) => {
 const updateTarea = async (req, res) => {
     try {
         const {id} = req.params;
-        const {titulo, completed} = req.body;
+        const {titulo, completada} = req.body;
         const usuarioFk = req.usuario.id;
         const tarea = await Tarea.findByPk(id);
         if(!tarea) {
@@ -43,7 +43,7 @@ const updateTarea = async (req, res) => {
         }
 
         if(titulo) tarea.titulo = titulo;
-        if(completed) tarea.completed = completed;
+        if(completada) tarea.completada = completada;
         await tarea.save();
         return res.status(200).json({message: "Tarea actualizada", tarea});
     } catch (error) {
